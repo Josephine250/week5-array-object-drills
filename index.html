@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kigali Eats Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 p-8 font-sans">
+    <div class="max-w-6xl mx-auto space-y-8">
+      <h1 class="text-3xl font-bold text-gray-800">Kigali Eats Dashboard</h1>
+
+      <!-- Stat Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4" id="stat-cards"></div>
+
+      <!-- District Revenue Chart -->
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h2 class="text-xl font-bold mb-4">Revenue by District (Delivered)</h2>
+        <div id="district-chart" class="space-y-3"></div>
+      </div>
+
+      <!-- Orders Table & Filters -->
+      <div class="bg-white p-6 rounded-lg shadow space-y-4">
+        <div class="flex justify-between items-center">
+          <h2 class="text-xl font-bold">Recent Orders</h2>
+          <div class="space-x-2" id="filters">
+            <!-- Filter buttons injected here -->
+          </div>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b bg-gray-50">
+                <th class="p-3">ID</th>
+                <th class="p-3">Customer</th>
+                <th class="p-3">District</th>
+                <th class="p-3">Total (RWF)</th>
+                <th class="p-3">Status</th>
+              </tr>
+            </thead>
+            <tbody id="orders-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
