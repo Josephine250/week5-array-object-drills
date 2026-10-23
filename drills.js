@@ -1,4 +1,4 @@
-import { orders } from "data.js&quot";
+import { orders } from "./data.js";
 const ORIGINAL = JSON.stringify(orders)
 //1.array of all order ids
 const orderId = orders.map(({id}) => id);
